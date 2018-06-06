@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>jQuery UI Datepicker - Dates in other months</title>
+  <link rel="stylesheet" href="http://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+  <link rel="stylesheet" href="/resources/demos/style.css">
+  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+  
+  
+  <style>
+    .ui-widget.ui-widget-content {
+    border: 2px solid lightslategray ;
+    height: 324px;
+    width: 320px;
+    border-radius: 17px;
+}
+.ui-widget-header {
+     border: 0px; 
+     background: white;
+    color: #333333;
+    font-weight: bold;
+
+}
+
+.ui-datepicker-month,
+.ui-datepicker-year
+ {  
+    line-height: 0px;
+    text-align: center;
+    vertical-align: middle;
+}
+.ui-datepicker-title, .ui-datepicker-header.ui-widget-header.ui-helper-clearfix.ui-corner-all{
+    height: 40px;
+    vertical-align: middle;
+}
+
+.ui-datepicker table {
+    width: 308px;
+    font-size: .9em;
+    border-collapse: separate; 
+    margin: 0 6px;
+    height: 268px;
+    border: solid black 2px;
+    border-radius: 17px;
+}
+.ui-datepicker th {
+    padding:0;
+}
+th.ui-datepicker-week-end [title~=Saturday] {
+    border-top-right-radius: 17px;
+    background-color:blueviolet;
+    padding-right: 30px;
+}
+a.ui-state-default {
+    margin: 0px;
+}
+
+[title~=Saturday] {
+    border-top-right-radius: 17px;
+}
+
+.fas.fa-calendar-alt {
+    color:darkgrey;
+    font-size: 40px;
+}
+
+.ui-datepicker td span, .ui-datepicker td a {
+    display: block;
+    margin: 0 0;
+    padding:11px 0 0 0;
+    text-align: center;
+    text-decoration: none;
+    height: 30px;
+    width: 35px;
+}
+.ui-state-default, .ui-widget-content .ui-state-default, .ui-widget-header .ui-state-default, .ui-button, html .ui-button.ui-state-disabled:hover, html .ui-button.ui-state-disabled:active {
+    margin: 0px;
+    border: 0;
+    color: coral;
+    border-radius: 5px;
+}
+table {
+    border-spacing: 0px;
+}
+.triangle-right {
+	width: 0;
+	height: 0;
+	border-left: 17px solid transparent;
+	border-bottom: 45px solid #555;
+	border-right:17px solid transparent;
+    color: rgb(222, 117, 117);
+}
+
+.ui-state-default, 
+.ui-widget-content .ui-state-default,
+ .ui-widget-header .ui-state-default, 
+ .ui-button, 
+ html .ui-button.ui-state-disabled:hover, 
+ html .ui-button.ui-state-disabled:active {
+     margin:0;
+     border:solid 1px black; 
+
+ }
+</style> 
+
+  <script>
+  $( function() {
+    $( "#datepicker" ).datepicker({
+      showOtherMonths: true,
+      selectOtherMonths: true
+    });
+  } );
+  </script>
+
+</head>
+<body>
+ 
+<p>
+        
+        <label for="datepicker"><i class="fas fa-calendar-alt"></i></label>
+        <input type="button" id="datepicker" value=> </p>
+ 
+
+
+<div class="triangle-right"></div>
+ 
+</body>
+</html>

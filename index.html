@@ -36,12 +36,16 @@
 </head>
 
 <style>
+    body {
+        line-height: 0px;
+    }
+
     #gradient {
         width: 100%;
         height: 2000px;
         background: #170704;
-        /*background:lineargradient(to right,#040B17 0%, #170705 30%,#040B17 85%); */
-        background: radial-gradient(#120505 60%, #040B17 90%);
+        background: linear-gradient(to right, #040B17 5%, #170705 10%, #170705 50%, #170705 80%, #040B17)95%;
+        /* background: radial-gradient(#120505 60%, #040B17 90%); */
         background-image: url(images/logo.jpg)red;
     }
 
@@ -61,21 +65,20 @@
         justify-content: center;
     }
 
-    .navbar-brand {
+  navbar-brand {
         display: separate;
-    }
-
+    } 
 
     @media only screen and (max-width: 768px) {
         .show {
             display: none;
         }
-        img {
-            width: 30%;
+        .hamburger, .headLogo {
+            width: 90%;
             height: auto;
-        }
+        } 
         h1 {
-            font-size: 20pt;
+            font-size: 16pt;
         }
         .subnavbar {
             display: none;
@@ -86,11 +89,11 @@
         }
     }
 
-    @media only screen and (max-width: 320px) {
-        img {
-            width: 10%;
+    @media only screen and (min-width: 1px) and (max-width: 320px) {
+        .hamburger, .headLogo {
+            width: 100%;
             height: auto;
-        }
+        } 
 
         .show {
             display: none;
@@ -105,7 +108,6 @@
             height: 10%;
         }
     }
-
     div {
         display: separate;
     }
@@ -134,14 +136,14 @@
         background-color: #00204F !important;
     }
 
-    .subnavbar {
-        position: fixed;
-        top: 20%;
+    /* .subnavbar {
+        position: relative;
+        float: left;
         width: 100%;
         height: 5%;
         padding: auto;
 
-    }
+    } */
 
     h2 {
         font-family: 'Exo 2', sans-serif;
@@ -151,8 +153,9 @@
         text-align: center;
     }
 
-    .col-2 {
+    .sub.col-2 {
         border: solid .5px #0066FF;
+        display: inline-block;
     }
 
     .logoTop {
@@ -160,75 +163,84 @@
         width: 30%;
 
     }
-/* <!-- 
+
     .navbar.fixed-top.navbar-light.bg-light {
         position: fixed;
+        height: auto;
+        padding:3% 0px 5px 0px;
+        float: left;
     }
 
     .subnavbar.subnavbar-dark.bg-primary {
-        position: fixed;
-    } --> */
+        position: sticky;
+        width: 100%;
+        display: inline-block;
+    }
 
-    .head {
+    .navbar-brand {
         justify-content: center;
         text-align: center;
         height: 20%;
     }
+
+    nav {
+        margin: auto;
+        height: auto
+    }
+
 </style>
 
 <body id="gradient">
     <!-- <div class="multi-bg-example"></div> -->
     <nav class="navbar fixed-top navbar-light bg-light">
-        <div class="row justify-content-center">
-            <div class="head col-2-md-12 justify-content-center">
-                <a class="navbar-brand" href="#">
-                    <img src="images/Asset 1.png" class="logo img-fluid">
-                    <br>
-                    <h1>
-                        <span class="show">Noisebridge</span>
-                    </h1>
-                </a>
-            </div>
-            <div class="col middleNoise">
-                <h1>Noisebridge</h1>
-            </div>
-            <div class="col hamburger">
-                <a class="navbar-brand" href="#">
-                    <img src="images/Asset 2.png" class="img-fluid">
-                </a>
-            </div>
-    </nav>
-    <nav class="subnavbar subnavbar-dark bg-primary">
-        <div class="row">
-            <div class="col-2">
-                <a class="navbar-sub" href="#">
-                    <h2>About us</h2>
-                </a>
-            </div>
-            <div class="col-2">
-                <a class="navbar-sub" href="#">
-                    <h2>About us</h2>
-                </a>
-            </div>
-            <div class="col-2">
-                <a class="navbar-sub" href="#">
-                    <h2>About us</h2>
-                </a>
-            </div>
-            <div class="col-2">
-                <a class="navbar-sub" href="#">
-                    <h2>About us</h2>
-                </a>
-            </div>
-            <div class="col-2">
-                <a class="navbar-sub" href="#">
-                    <h2>About us</h2>
-                </a>
-            </div>
-            <div class="col-2">
-            </div>
+        <div class="col-2 col-lg-12 justify-content-center">
+            <a class="headLogo navbar-brand" href="#">
+                <img src="images/Asset 1.png" class="img-fluid">
+                <br>
+                <h1>
+                    <span class="show">Noisebridge</span>
+                </h1>
+            </a>
+        </div>
+        <div class="col middleNoise">
+            <h1>Noisebridge</h1>
+        </div>
+        <div class="col-2 hamburger">
+            <a class="navbar-brand" href="#">
+                <img src="images/Asset 2.png" class="img-fluid">
+            </a>
         </div>
     </nav>
+    <div class="subnavbar subnavbar-dark bg-primary">
+            <div class="sub col-2">
+                <a class="navbar-sub" href="#">
+                    <h2>About us</h2>
+                </a>
+            </div>
+            <div class="sub col-2">
+                <a class="navbar-sub" href="#">
+                    <h2>About us</h2>
+                </a>
+            </div>
+            <div class="sub col-2">
+                <a class="navbar-sub" href="#">
+                    <h2>About us</h2>
+                </a>
+            </div>
+            <div class="sub col-2">
+                <a class="navbar-sub" href="#">
+                    <h2>About us</h2>
+                </a>
+            </div>
+            <div class="sub col-2">
+                <a class="navbar-sub" href="#">
+                    <h2>About us</h2>
+                </a>
+            </div>
+            <div class="sub col-2">
+            </div>
+        </div>
+    </div>
     <div class="logoTop">
         <img src="images/Logo_1.png" class="img-fluid">
     </div>
@@ -241,7 +253,7 @@
             </ol>
             <div class="carousel-inner">
                 <div class="carousel-item active">
-                    <img class="d-block w-100" src="images/edited_create.png" alt="Create">
+                    <img class="d-block w-100" src="images/edited_create.png" alt="Create" class="img-fluid">
                 </div>
                 <div class="carousel-item">
                     <img class="d-block w-100" src="..." alt="Second slide">

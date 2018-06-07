@@ -1,0 +1,342 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Noisebridge</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+        crossorigin="anonymous">
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+        crossorigin="anonymous"></script>
+
+    <!-- Hotjar Tracking Code for https://nhobbs22.github.io/Noisebridge/ -->
+    <script>
+        (function (h, o, t, j, a, r) {
+            h.hj = h.hj || function () { (h.hj.q = h.hj.q || []).push(arguments) };
+            h._hjSettings = { hjid: 906147, hjsv: 6 };
+            a = o.getElementsByTagName('head')[0];
+            r = o.createElement('script'); r.async = 1;
+            r.src = t + h._hjSettings.hjid + j + h._hjSettings.hjsv;
+            a.appendChild(r);
+        })(window, document, 'https://static.hotjar.com/c/hotjar-', '.js?sv=');
+    </script>
+</head>
+
+<style>
+    body {
+        line-height: 0px;
+    }
+
+    #gradient {
+        width: 100%;
+        height: 2000px;
+        background: #170704;
+        background: linear-gradient(to right, #040B17 5%, #170705 10%, #170705 50%, #170705 80%, #040B17)95%;
+        /* background: radial-gradient(#120505 60%, #040B17 90%); */
+    }
+
+    .bg-light {
+        background-color: #040B17 !important;
+    }
+
+    h1 {
+        font-family: 'Exo 2', sans-serif;
+        font-weight: semi-bold;
+        font-size: 30pt;
+        color: #FFAF00;
+        text-align: center;
+    }
+
+    .show {
+        justify-content: center;
+    }
+
+    navbar-brand {
+        display: separate;
+    }
+
+    @media only screen and (max-width: 768px) {
+        .show {
+            display: none;
+        }
+        .hamburger,
+        .headLogo {
+            width: 90%;
+            height: auto;
+        }
+        h1 {
+            font-size: 16pt;
+        }
+        .subnavbar.subnavbar-dark.bg-primary {
+            display: none;
+        }
+        .navbar {
+            height: 20%;
+            text-align: center;
+        }
+    }
+
+    @media only screen and (min-width: 1px) and (max-width: 320px) {
+        .hamburger,
+        .headLogo {
+            width: 100%;
+            height: auto;
+        }
+
+        .show {
+            display: none;
+        }
+        h1 {
+            font-size: 16pt;
+        }
+        .subnavbar.subnavbar-dark.bg-primary {
+            display: none;
+        }
+        .navbar {
+            height: 10%;
+        }
+    }
+
+    div {
+        display: separate;
+    }
+
+    .middleNoise {
+        text-align: center;
+        vertical-align: center;
+    }
+
+    @media only screen and (min-width: 769px) {
+        .middleNoise {
+            display: none;
+        }
+        .hamburger {
+            display: none;
+        }
+        img.logo {
+            text-align: center
+        }
+        .navbar-brand {
+            display: block;
+        }
+    }
+
+    .bg-primary {
+        background-color: #00204F !important;
+        background-color: #200226 !important;
+    }
+
+
+    h2 {
+        font-family: 'Exo 2', sans-serif;
+        font-weight: lighter;
+        font-size: 16pt;
+        color: #FFAF00;
+        text-align: center;
+    }
+
+    .sub.col-2 {
+        border-right: solid 1px #0066FF;
+        display: inline-flex;
+        padding: auto;
+    }
+
+    .subNone.col-2 {
+        border-right: none;
+        display: inline-flex;
+        padding: auto;
+    }
+
+    a {
+        margin: none;
+    }
+
+    .logoTop {
+        float: right;
+        width: 30%;
+
+    }
+
+    .navbar.fixed-top.navbar-light.bg-light {
+        position: fixed;
+        height: auto;
+        padding: 2% 0px 5px 0px;
+        float: left;
+    }
+
+    .subnavbar.subnavbar-dark.bg-primary {
+        position: sticky;
+        width: 100%;
+    }
+
+    .navbar-brand {
+        justify-content: center;
+        text-align: center;
+        height: 20%;
+    }
+    .navigation {
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 1;
+    }
+    nav {
+        margin: auto;
+        height: auto
+    }
+
+    /* .parentBack {
+        position: sticky;
+        float: left;
+        top: auto;
+        left: auto;
+    } */
+
+    .carousel {
+        width: 100%;
+        margin: auto;
+        background-color: rgba(4, 11, 23, .6);
+        opacity: 0.7;
+
+    }
+
+    .d-block,
+    .w-90 {
+        margin: auto;
+    }
+
+    .carousel {
+        position: absolute;
+        top: 0;
+        /* bottom: 0; */
+        left: 0;
+        justify-content: center;
+        height: 40%
+    }
+
+    .carousel-item {
+        justify-content: center;
+    }
+
+    .row {
+        position: relative;
+        top: 0;
+        left: 0;
+    }
+
+    .transparent {
+        background-color: #040B17;
+        position: relative;
+        bottom: 0;
+        width: 100%;
+        height: 10%;
+        opacity: .6;
+    }
+</style>
+
+<body id="gradient">
+    <div class="navigation">
+        <nav class="navbar fixed-top navbar-light bg-light">
+            <div class="col-2 col-lg-12 justify-content-center">
+                <a class="headLogo navbar-brand" href="#">
+                    <img src="images/Asset 1.png" class="img-fluid">
+                    <br>
+                    <h1>
+                        <span class="show">Noisebridge</span>
+                    </h1>
+                </a>
+            </div>
+            <div class="col middleNoise">
+                <h1>Noisebridge</h1>
+            </div>
+            <div class="col-2 hamburger">
+                <a class="navbar-brand" href="#">
+                    <img src="images/Asset 2.png" class="img-fluid">
+                </a>
+            </div>
+            <div class="subnavbar subnavbar-dark bg-primary">
+                <div class="sub col-2">
+                    <a class="navbar-sub" href="#">
+                        <h2>About us</h2>
+                    </a>
+                </div>
+                <div class="sub col-2">
+                    <a class="navbar-sub" href="#">
+                        <h2>Calendar</h2>
+                    </a>
+                </div>
+                <div class="sub col-2">
+                    <a class="navbar-sub" href="#">
+                        <h2>Our space</h2>
+                    </a>
+                </div>
+                <div class="sub col-2">
+                    <a class="navbar-sub" href="#">
+                        <h2>Join us</h2>
+                    </a>
+                </div>
+                <div class="subNone col-2">
+                    <a class="navbar-sub" href="#">
+                        <h2>Support us</h2>
+                    </a>
+                    <div class="subNone col-2">
+                        <a class="navbar-sub" href="#">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </div>
+    <!-- <div class="parentBack">
+        <img src="images/Logo_1.png" class="logoTop img-fluid"> -->
+        <div class="carousel">
+            <div class="row" id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+                <ol class="carousel-indicators">
+                    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active">
+                    </li>
+                    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                    <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                </ol>
+                <div class="carousel-inner">
+                    <div class="carousel-item-fluid active">
+                        <img class="d-block" src="images/edited_create.png" alt="Create" class="img-fluid">
+                    </div>
+                    <div class="carousel-item-fluid">
+                        <img class="d-block" src="..." alt="Second slide">
+                    </div>
+                    <div class="carousel-item-fluid">
+                        <img class="d-block" src="..." alt="Third slide">
+                    </div>
+                </div>
+                <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Previous</span>
+                </a>
+                <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Next</span>
+                </a>
+            </div>
+            <div class="transparent"></div>
+        </div>
+    </div>
+    </div>
+
+
+
+</body>
+
+</html>
